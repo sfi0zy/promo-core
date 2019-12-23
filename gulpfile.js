@@ -276,7 +276,10 @@ gulp.task('browser-sync', () => {
 
     gulp.watch([
         './src/images/*'
-    ], gulp.series('promo-core:copy-images'));
+    ], gulp.series(
+        'promo-core:copy-images',
+        'promo-core:generate-placeholders'
+    ));
 
 
     gulp.watch([
