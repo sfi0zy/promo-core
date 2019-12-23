@@ -1,0 +1,299 @@
+doctype html
+html(lang='en')
+    head
+        meta(http-equiv='content-type' content='text/html;charset=UTF-8')
+        meta(name='viewport' content='user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1')
+
+        title Promo Core v#{ pkg.version }
+
+        link(rel='apple-touch-icon' sizes='180x180' href='../images/favicon/apple-touch-icon.png')
+        link(rel='icon' type='image/png' sizes='32x32' href='../images/favicon/favicon-32x32.png')
+        link(rel='icon' type='image/png' sizes='16x16' href='../images/favicon/favicon-16x16.png')
+        link(rel='manifest' href='../images/favicon/site.webmanifest')
+        link(rel='mask-icon' href='../images/favicon/safari-pinned-tab.svg' color='#050505')
+        meta(name='theme-color' content='#ffffff')
+
+        link(rel='prefetch' href='../main.min.js?v='  + pkg.version)
+
+        link(rel='stylesheet' href='../main.min.css')
+
+    body
+        div(style='width: 90%;   max-width: 1100px;   margin: 0 auto;')
+
+
+
+            // -----------------------------------------------------------------
+            //  HEADER
+            // -----------------------------------------------------------------
+
+            header
+                div
+                    h1
+                        span Promo Core &nbsp;
+                        small: sub v#{ pkg.version }
+                br
+                div ヾ( °-°)シﾟ`･｡･°*♪･ﾟ’☆
+            br
+            br
+
+
+
+            // -----------------------------------------------------------------
+            //  NAVIGATION
+            // -----------------------------------------------------------------
+
+            nav
+                h2 Table of contents
+                br
+                div Docs sections:
+                ul(style='padding-left: 2em;')
+                    li: a(href='#anchor__overview') Overview
+                    li: a(href='#anchor__coding-conventions') Coding conventions
+                    li: a(href='#anchor__dependencies') Dependencies
+                    li: a(href='#anchor__ui-components') UI components
+                br
+                
+                div UI components:
+                ul(style='padding-left: 2em;')
+                    each file in files
+                        each block in file.blocks
+                            li: a(href='#' + file.file) #{ block.name }
+            br
+            br
+
+
+
+            // -----------------------------------------------------------------
+            //  OVERVIEW
+            // -----------------------------------------------------------------
+
+            section#anchor__overview
+                h2 Project overview
+                br
+                p Promo Core is a boilerplate designed for static promotional websites.
+                br
+                p See /README for more information.
+            br
+            br
+
+
+
+
+            // -----------------------------------------------------------------
+            //  CODING CONVENTIONS
+            // -----------------------------------------------------------------
+
+            section#anchor__coding-conventions
+                h2 Coding conventions
+                br
+                ol(style='padding-left: 2em;')
+                    li Keep the starting structure of the files in project.
+                    li Use ES6+. Respect ESLint.
+                    li Use similar names of components in JS and CSS: "MyComponent" (JS) &rarr; .ui-my-component (LESS).
+                    li Document everything, especially math algoritms and dependencies. Use www links if needeed.
+                    li Use "if" statements and the __DEBUG__ define to wrap code for debugging.
+                    li Import everything to the global APP object.
+                    li Wrap "window" and "document" events using global APP.EVENTS object.
+                    li Use RSCSS methodology in CSS.
+            br
+            br
+
+
+
+            // -----------------------------------------------------------------
+            //  DEPENDENCIES
+            // -----------------------------------------------------------------
+
+            section#anchor__dependencies
+                h2 Dependencies
+                br
+                h3 Development dependencies
+                ul(style='padding-left: 2em;')
+                    li
+                        b Gulp
+                        ul(style='padding-left: 2em;')
+                            li gulp - we install it as a local package to avoid conflicts between versions
+                                ul(style='padding-left: 2em;')
+                                    li gulp-load-plugins - we use a lot of gulp plugins, this script helps to include them all into the gulpfile
+                                    li gulp-clean - to clean the /dist directory
+                                    li gulp-if - this simple package is useful if we want to add some actions to development or production builds only
+                                    li gulp-real-favicon - this one generates icons for different devices from the one big image
+                                    li gulp-rename - sometimes we need to rename the files in /dist directory
+                                    li gulp-size - shows the sizes of CSS files
+                                    li gulp-util - some utils for node.js
+                            li path - we use paths in node.js
+                            li yargs - adds argc and argv to the gulpfile
+                            li colors - helps to use various colors in the console
+                            li browser-sync - updates the page in browser when we use the development mode
+
+                    li
+                        b HTML
+                        ul(style='padding-left: 2em;')
+                            li gulp-pug - the Pug (ex Jade) preprocessor is very simple and works nice in our case
+                                ul(style='padding-left: 2em;')
+                                    li pug - the preprocessor itself
+                            li gulp-inject-svg - we inject all svg files into the pages to use them in animations
+
+                    li
+                        b CSS
+                        ul(style='padding-left: 2em;')
+                            li gulp-less - we use the LESS preprocessor
+                                ul(style='padding-left: 2em;')
+                                    li gulp-sourcemaps - we use it to add sourcemaps for LESS files
+                            li gulp-postcss - we use the PostCSS postprocessor as well
+                                ul(style='padding-left: 2em;')
+                                    li postcss-preset-env - we use this standard preset
+                                    li list-selectors - this one helps to find unnecessary ids in the CSS
+                                    li postcss-fixes - at first, it fixes some flex bugs
+                                    li critical - extracts the critical CSS
+                                    li cssnano - compresses the CSS
+                                    li doiuse - shows what rules we used without browsers support
+
+                    li
+                        b JS
+                        ul(style='padding-left: 2em;')
+                            li webpack - we use it to build javascript only
+                                ul(style='padding-left: 2em;')
+                                    li webpack-stream - needed to integrate webpack into the gulp pipelines
+                                    li babel-loader - webpack requires it
+                            li @babel/core - the babel itself
+                                ul(style='padding-left: 2em;')
+                                    li @babel/preset-env - we use the standard preset
+                                    li @babel/plugin-proposal-class-properties - adds static fields for JS classes
+                                    li babel-eslint - the default linter for ES6
+                            li gulp-eslint - we lint javascript when creating the production build
+                                ul(style='padding-left: 2em;')
+                                    li eslint-config-airbnb-base - we extend this config, see .eslintrc
+                                    li eslint-plugin-import - this plugin is required if we use es6 modules
+
+                    li
+                        b Custom gulp plugins
+                        ul(style='padding-left: 2em;')
+                            li gulp-util - some utils for node.js
+                            li through - this package is used in gulp-plugins, better see their code to understand it
+                            li
+                                b Docs
+                                ul(style='padding-left: 2em;')
+                                    li dss - the documented stylesheets parser
+                            li
+                                b SVGPlaceholders
+                                ul(style='padding-left: 2em;')
+                                    li handlebars - minimal templating
+                                    li color-thief - extracts the color palette from an image
+                                    li rgb-hex - converts RGB color to HEX
+                                    li image-size - extracts image height and width
+                br
+                h3 Production dependencies
+                ul(style='padding-left: 2em;')
+                    li
+                        b APP.DEPENDENCIES
+                        ul(style='padding-left: 2em;')
+                            li webfontloader - loads the fonts and says when they are ready to use
+                            li fullpage.js - the popular script to create page per page scrolling with effects
+                            li @barba/core - creates transitions between pages
+                            li three - 3d library
+                            li postprocessing - post processing for three.js
+                            li animejs - simple, but powerful animation library
+                            li normalize.css - classic normalize
+                            li to-slug-case - converts a string to the slug-case. We use it when generating CSS classes
+                    li
+                        b APP.POLYFILLS
+                        ul(style='padding-left: 2em;')
+                            li object-fit-images - polyfill
+            br
+            br
+
+
+
+            // -----------------------------------------------------------------
+            //  UI COMPONENTS
+            // -----------------------------------------------------------------
+
+            section#anchor__ui-components
+                h2 UI components
+                each file in files
+                    div(id=file.file)
+                        each block in file.blocks
+                            h3: u #{ block.name }
+                            div
+                                - var filename = file.file;
+                                - filename = filename.substr(0, filename.lastIndexOf('/'));
+                                em: small &sim;#{ filename }
+                            br
+                            if block.description
+                                p #{ block.description }
+                                br
+                            if block.component
+                                div(title='Use PROMO_CORE.get(' + block.component + ', id) to get it')
+                                    b JS: #{ block.component }
+                                br
+                            if block.method
+                                ul(style='padding-left: 2em;')
+                                    each _method in (Array.isArray(block.method) ? block.method : [block.method])
+                                        li
+                                            span #{ _method.name }
+                                            span &nbsp; - #{ _method.description }
+                                br
+                            if block.event
+                                ul(style='padding-left: 2em;   list-style-type: circle;')
+                                    each _event in (Array.isArray(block.event) ? block.event : [block.event])
+                                        li(title='Use component.addEventListener("' + _event + '", (state) => { /* . . . */ }) to subscribe.')
+                                            b Event:&nbsp;
+                                            span #{ _event }
+                                br
+                            if block.requires
+                                ul(style='padding-left: 2em;    list-style-type: square;')
+                                    each _requires in (Array.isArray(block.requires) ? block.requires : [block.requires])
+                                        li
+                                            b Requires:&nbsp;
+                                            span #{ _requires }
+                                br
+                            if block.markup
+                                div !{ block.markup.compiled }
+                                br
+                                if block.variant
+                                    each _variant in (Array.isArray(block.variant) ? block.variant : [block.variant])
+                                        h4 Variant: #{ _variant }
+                                        br
+                                        div(data-docs-only-variant=_variant) !{ block.markup.compiled }
+                                br
+                                h4 Source code (Pug)
+                                br
+                                code
+                                    pre(style='overflow-x: auto;') #{ block.markup.example }
+                                br
+                                h4 Source code (HTML)
+                                br
+                                code
+                                    pre(style='overflow-x: auto;') #{ block.markup.compiled }
+                    br
+                    br
+
+
+
+            // -----------------------------------------------------------------
+            //  FOOTER
+            // -----------------------------------------------------------------
+
+            footer
+                span Copyright &copy; Ivan Bogachev, 2019
+            br
+
+
+
+        script(src='../main.min.js')
+
+        script.
+            document.addEventListener('DOMContentLoaded', function() {
+                [].forEach.call(document.querySelectorAll('[data-docs-only-variant]'), function(example) {
+                    var variant = example.getAttribute('data-docs-only-variant');
+                    var rootElementIndex = 0;
+
+                    if (example.childNodes[1] && (example.childNodes[1].nodeType !== Node.TEXT_NODE)) {
+                        rootElementIndex = 1;
+                    }
+
+                    example.childNodes[rootElementIndex].classList.add(variant);
+                });
+            });
+

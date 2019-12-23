@@ -1,0 +1,56 @@
+// @name Image
+// @description Image with lazy loading and placeholder
+//
+// @component Image
+// @variant -rounded
+//
+// @markup
+//.ui-image
+//    - var src = '../images/main.jpg';
+//    - var placeholder = './dist/images/main.jpg.placeholder.svg';
+//    img.image.-placeholder(src=placeholder)
+//    img.image(data-lazy-image data-src=src src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' alt='')
+//    noscript
+//        img.image(src=src alt='')
+
+
+.@{global-prefix}image {
+    position: relative;
+
+    > .image {
+        display: block;
+        height: auto;
+        // We need to set width for block because image can be replaced with injected SVG and its width is not "100%".
+        width: 100%;
+        max-width: 100%;
+    }
+
+    > .image[data-lazy-image] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity @defaults[animation-duration-long] @defaults[animation-function];
+        will-change: opacity;
+    }
+
+    > .image[data-lazy-image][data-lazy-loaded] {
+        opacity: 1;
+    }
+
+    > noscript > .image {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    > .image.-placeholder {
+
+    }
+
+    &.-rounded {
+        border-radius: @defaults[border-radius];
+        overflow: hidden;
+    }
+}
+

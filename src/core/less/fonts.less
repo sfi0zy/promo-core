@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+//  FONTS
+// -----------------------------------------------------------------------------
+//
+//  The global styles for fonts are here.
+//  The constants should be defined in /src/core/less/constants.
+//
+
+html {
+    // This is the sequence of the default system fonts
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+    // Font size formula (for default values):
+    // size = (14px + (20 - 14) * ((100vw - 400px) / ( 1200 - 400)))
+    // Read more: https://www.smashingmagazine.com/2016/05/fluid-typography/
+    font-size: ~'calc(' @font-size[min-px] ~' + (' @font-size[max] ~' - ' @font-size[min] ~') * ((100vw - ' @grid[breakpoint-small-px] ~') / (' @grid[breakpoint-large] ~' - ' @grid[breakpoint-small] ~')))';
+
+    @media screen and (max-width: @grid[breakpoint-small-px]) {
+        font-size: @font-size[min-px];
+    }
+
+    @media screen and (min-width: @grid[breakpoint-large-px]) {
+        font-size: @font-size[max-px];
+    }
+
+    line-height: 1.50;
+}
+

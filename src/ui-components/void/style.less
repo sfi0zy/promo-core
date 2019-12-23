@@ -1,0 +1,24 @@
+// @name Void
+// @description Nothing happens here...
+//
+// @component Void
+// @method doNothing() - does nothing
+// @event nothing-is-happened
+// @variant -foggy
+// @requires nothing
+//
+// @markup
+//.ui-void Void
+
+
+.@{global-prefix}void {
+    padding: 1rem;
+    background: @void[background];
+    color: @void[color];
+    cursor: pointer;
+
+    &.-foggy {
+        filter: blur(2px);
+    }
+}
+

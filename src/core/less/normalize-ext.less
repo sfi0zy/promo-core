@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+//  EXTENSION FOR NORMALIZE.CSS
+// -----------------------------------------------------------------------------
+//
+//  In this file we write CSS which affects all elements in different situations.
+//  We use tags as selectors, hacks and other global things here.
+//
+
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    min-height: 100%;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    min-width: 320px;
+}
+
+
+::selection {
+    color: @html[selection-color];
+    background: @html[selection-background];
+}
+
+
+:focus {
+    outline: none;
+}
+
+
+div:empty:not(._allow-empty) {
+    display: none;
+}
+
