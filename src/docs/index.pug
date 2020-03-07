@@ -87,14 +87,17 @@ html(lang='en')
                 h2 Coding conventions
                 br
                 ol(style='padding-left: 2em;')
-                    li Keep the starting structure of the files in project.
+                    li Keep the starting structure of the files (and structure of the code) in your project.
                     li Use ES6+. Respect ESLint.
                     li Use similar names of components in JS and CSS: "MyComponent" (JS) &rarr; .ui-my-component (LESS).
                     li Document everything, especially math algoritms and dependencies. Use www links if needeed.
                     li Use "if" statements and the __DEBUG__ define to wrap code for debugging.
                     li Import everything to the global APP object.
                     li Wrap "window" and "document" events using global APP.EVENTS object.
-                    li Use RSCSS methodology in CSS.
+                    li Use RSCSS methodology in CSS. Keep the code readable. Add more spaces if needed.
+                    li Use simple and understandable solutions. Avoid tricky math mixins in CSS.
+                    li Use 4 spaces. No tabs.
+                    li Use UTF-8 and UNIX-style line endings.
             br
             br
 
@@ -276,7 +279,7 @@ html(lang='en')
             // -----------------------------------------------------------------
 
             footer
-                span Copyright &copy; Ivan Bogachev, 2019
+                span Copyright &copy; Ivan Bogachev, 2019-2020
             br
 
 
