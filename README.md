@@ -91,5 +91,5 @@ Feel free to open an issue in this repository.
 
 MIT License
 
-Copyright (c) 2019 Ivan Bogachev <sfi0zy@gmail.com>
+Copyright (c) 2019-2020 Ivan Bogachev <sfi0zy@gmail.com>
 
