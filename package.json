@@ -58,6 +58,7 @@
     "pug": "2.0.4",
     "rgb-hex": "3.0.0",
     "through": "2.3.8",
+    "w3cjs": "0.4.0",
     "webpack": "4.41.4",
     "webpack-stream": "5.2.1",
     "yargs": "15.0.2"

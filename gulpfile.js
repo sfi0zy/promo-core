@@ -18,6 +18,7 @@ const browserSync  = require('browser-sync').create();
 
 const dss             = require('./gulp-plugins/gulp-dss.js');
 const SVGPlaceholders = require('./gulp-plugins/gulp-svg-placeholders');
+const validate        = require('./gulp-plugins/gulp-w3c-validate');
 
 
 require('colors');
@@ -206,6 +207,7 @@ gulp.task('promo-core:build-pages', () => {
         .pipe($.injectSvg())
         .pipe(critical(require('./critical.config.js')))
         .pipe(gulp.dest('./dist'))
+        .pipe($.if(ENVIRONMENT === 'production', validate()))
         .pipe(browserSync.stream());
 });
 
@@ -221,6 +223,7 @@ gulp.task('promo-core:build-docs', () => {
         }))
         .pipe($.injectSvg())
         .pipe(gulp.dest('./dist/docs/'))
+        .pipe($.if(ENVIRONMENT === 'production', validate()))
         .pipe(browserSync.stream());
 });
 
