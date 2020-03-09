@@ -154,6 +154,17 @@ gulp.task('promo-core:compile-js', () => {
 
 
 
+gulp.task('promo-core:lint-less', () => {
+    return gulp.src('./src/**/*.less')
+        .pipe($.stylelint({
+            failAfterError: false,
+            reporters: [
+                { formatter: 'string', console: true }
+            ]
+        }));
+});
+
+
 gulp.task('promo-core:compile-less', () => {
     return gulp.src('./src/main.less')
         .pipe($.if(ENVIRONMENT === 'development', $.sourcemaps.init()))
@@ -243,6 +254,7 @@ gulp.task('promo-core', gulp.series(
     'promo-core:clean-dist',
     'promo-core:lint-js',
     'promo-core:compile-js',
+    'promo-core:lint-less',
     'promo-core:compile-less',
     'promo-core:generate-favicon',
     'promo-core:copy-images',
@@ -272,6 +284,7 @@ gulp.task('browser-sync', () => {
     gulp.watch([
         './src/**/*.less',
     ], gulp.series(
+        'promo-core:lint-less',
         'promo-core:compile-less',
         'promo-core:build-docs'
     ));

@@ -6,9 +6,11 @@
 //  The constants should be defined in /src/core/less/constants.
 //
 
+/* stylelint-disable max-line-length */
+
 html {
     // This is the sequence of the default system fonts
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 
     // Font size formula (for default values):
     // size = (14px + (20 - 14) * ((100vw - 400px) / ( 1200 - 400)))
@@ -23,6 +25,8 @@ html {
         font-size: @font-size[max-px];
     }
 
-    line-height: 1.50;
+    line-height: 1.5;
 }
+
+/* stylelint-enable max-line-length */
 

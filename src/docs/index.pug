@@ -94,7 +94,7 @@ html(lang='en')
                     li Use "if" statements and the __DEBUG__ define to wrap code for debugging.
                     li Import everything to the global APP object.
                     li Wrap "window" and "document" events using global APP.EVENTS object.
-                    li Use RSCSS methodology in CSS. Keep the code readable. Add more spaces if needed.
+                    li Use RSCSS methodology in CSS. Keep the code readable. Respect Stylelint.
                     li Use simple and understandable solutions. Avoid tricky math mixins in CSS.
                     li Use 4 spaces. No tabs.
                     li Use UTF-8 and UNIX-style line endings.
@@ -151,6 +151,9 @@ html(lang='en')
                                     li critical - extracts the critical CSS
                                     li cssnano - compresses the CSS
                                     li doiuse - shows what rules we used without browsers support
+                            li gulp-stylelint - gulp wrapper for stylelint
+                                ul(style='padding-left: 2em;')
+                                    li stylelint - linter for CSS/LESS
 
                     li
                         b JS
