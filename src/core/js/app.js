@@ -23,7 +23,7 @@ class App {
         this.__PROJECT_VERSION__   = __PROJECT_VERSION__;
         this.__DEBUG__             = __DEBUG__;
         this.__GLOBAL_CSS_PREFIX__ = __GLOBAL_CSS_PREFIX__;
-        
+
 
         this.DEPENDENCIES = DEPENDENCIES;
         this.POLYFILLS    = POLYFILLS;

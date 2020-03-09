@@ -32,7 +32,7 @@ module.exports = {
             preset: 'safe'
         }),
 
-        
+
         // This plugin can list IDs in the CSS.
         // We shouldn't use them and it shows to us all of them
         // during the building process.

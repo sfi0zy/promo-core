@@ -4,7 +4,7 @@
 //
 //  We use gulp-real-favicon for building icons from a big image.
 //  See https://www.npmjs.com/package/gulp-real-favicon for more options.
-// 
+//
 
 
 module.exports = {

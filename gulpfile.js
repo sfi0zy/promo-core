@@ -246,7 +246,7 @@ gulp.task('promo-core:build-docs', () => {
 //
 //  The order is important here. CSS must be generated before HTML, because
 //  the critical CSS for HTML can't be obtained without CSS, SVG placeholders
-//  must be created before docs and pages because we inline SVG right into the 
+//  must be created before docs and pages because we inline SVG right into the
 //  pages and these images must be ready when we compile HTML, etc.
 //
 

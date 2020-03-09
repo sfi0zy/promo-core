@@ -41,9 +41,9 @@ class Ui {
         if (!this.cache[type]) {
             this.cache[type] = [];
         }
-        
+
         const elements = document.querySelectorAll(selector);
-        
+
         return [].map.call(elements, (element) => {
             const newComponent = new this.library[type](element, options);
 
@@ -54,7 +54,7 @@ class Ui {
     }
 
 
-    update() { 
+    update() {
         [].forEach.call(this.library, (type) => {
             this.create(
                 type,
