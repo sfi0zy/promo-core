@@ -34,8 +34,8 @@ import anime from 'animejs/lib/anime.es';
 
 
 
-// https://alvarotrigo.com/fullPage/
-import fullpage from 'fullpage.js';
+// https://locomotivemtl.github.io/locomotive-scroll/
+import LocomotiveScroll from 'locomotive-scroll';
 
 
 
@@ -60,7 +60,7 @@ const DEPENDENCIES = {
     toSlugCase,
     barba,
     anime,
-    fullpage,
+    LocomotiveScroll,
     THREE,
     postprocessing,
     WebFont
