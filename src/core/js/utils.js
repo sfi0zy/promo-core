@@ -72,13 +72,22 @@ function generateRandomString(length = 8) {
 }
 
 
+function compileTemplate(template, data) {
+    return template.replace(/{{(\w*)}}/g, (str, key) => {
+        return data.hasOwnProperty(key) ? data[key] : '';
+    });
+}
+
+
+
 // -----------------------------------------------------------------------------
 
 
 const UTILS = {
     debounce,
     throttle,
-    generateRandomString
+    generateRandomString,
+    compileTemplate
 };
 
 
