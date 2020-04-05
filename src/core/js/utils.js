@@ -59,6 +59,18 @@ function throttle(func, ms) {
 }
 
 
+function generateRandomString(length = 8) {
+    const possibleChars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+
+    let str = '';
+
+    for (let i = 0; i < length; i++) {
+        str += possibleChars.charAt(Math.floor(Math.random() * possibleChars.length));
+    }
+
+    return str;
+}
+
 
 // -----------------------------------------------------------------------------
 
@@ -66,6 +78,7 @@ function throttle(func, ms) {
 const UTILS = {
     debounce,
     throttle,
+    generateRandomString
 };
 
 
