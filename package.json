@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/sfi0zy/html-template.git"
+    "url": "git://github.com/sfi0zy/promo-core.git"
   },
   "browserslist": [
     "> .5% and last 2 versions",
