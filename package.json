@@ -27,7 +27,7 @@
     "babel-eslint": "10.0.3",
     "babel-loader": "8.0.6",
     "browser-sync": "2.26.7",
-    "color-thief": "2.2.5",
+    "color-thief": "git+ssh://git@github.com/sfi0zy/color-thief.git#d3ca3490b34076542fd44896731521c073a279bd",
     "colors": "1.4.0",
     "critical": "1.3.9",
     "cssnano": "4.1.10",
