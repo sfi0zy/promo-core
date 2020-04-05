@@ -12,6 +12,8 @@
 
 import Events from './events';
 
+import UTILS from '../utils';
+
 
 export default class UIComponent {
     // Static properties, if any, should be placed here, before constructor.
@@ -25,6 +27,13 @@ export default class UIComponent {
         this.cache = {
             root
         };
+
+        // We set the unique id to every component. It's not an #id
+        // of the root element, it's just an unique identifier of the
+        // component in scripts. Sometimes it's useful to start
+        // ids of the particular DOM elements in the component with this string.
+        // It emulates namespace or so.
+        this.uniqueID = `ui-component-${UTILS.generateRandomString(8)}`;
 
         // We set this data attribute to save the fact that we created
         // the UI component for this DOM element. This is important,
