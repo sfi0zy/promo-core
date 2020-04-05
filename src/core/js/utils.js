@@ -73,11 +73,10 @@ function generateRandomString(length = 8) {
 
 
 function compileTemplate(template, data) {
-    return template.replace(/{{(\w*)}}/g, (str, key) => {
-        return data.hasOwnProperty(key) ? data[key] : '';
+    return template.replace(/{{\s*(\w*)\s*}}/g, (str, key) => {
+        return (key in data) ? data[key] : '';
     });
 }
-
 
 
 // -----------------------------------------------------------------------------
