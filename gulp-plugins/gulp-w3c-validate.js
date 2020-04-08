@@ -2,7 +2,7 @@
 //  GULP W3C VALIDATE
 // -----------------------------------------------------------------------------
 //
-//  This plugin validates html using the W3C validator.
+//  This plugin validates the compiled pages using the W3C validator.
 //
 //  See more information about W3C API here:
 //  https://validator.w3.org/docs/api.html

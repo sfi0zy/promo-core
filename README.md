@@ -28,7 +28,7 @@ The development mode with BrowserSync and sourcemaps (the generated docs are ser
 npm run dev
 ```
 
-The production mode with ESLint:
+The production mode with ESLint and W3C validator:
 
 ```sh
 npm run prod
@@ -54,7 +54,7 @@ All ideas and conventions are explained in the comments in the source code, so i
 
 ## Dependencies
 
-The full list of dependencies with descriptions can be found in the docs template in ```/src/docs/``` or in docs page, generated during the build process.
+The full list of the dependencies with descriptions can be found in the docs template in ```/src/docs/``` or in the docs page, generated during the build process.
 
 
 

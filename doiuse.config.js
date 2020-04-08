@@ -2,7 +2,9 @@
 //  CONFIG: DOIUSE
 // -----------------------------------------------------------------------------
 //
-//  We use the "doiuse" npm module for checking written CSS.
+//  We use the "doiuse" npm module for displaying the information about
+//  the CSS features we used, if the browsers don't support them yet.
+//
 //  See https://www.npmjs.com/package/doiuse for more options.
 //
 

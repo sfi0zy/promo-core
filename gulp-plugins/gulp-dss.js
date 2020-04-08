@@ -2,7 +2,8 @@
 //  GULP DSS
 // -----------------------------------------------------------------------------
 //
-//  This plugin generates docs from comments in CSS (or LESS in our case) files.
+//  This plugin generates the docs for UI components using the comments in CSS
+//  (or LESS in our case) files.
 //
 
 

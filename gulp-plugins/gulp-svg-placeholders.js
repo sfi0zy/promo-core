@@ -12,7 +12,6 @@
 //  Also, there is an article about them: https://habr.com/ru/post/431232/
 //
 
-const fs         = require('fs');
 const Handlebars = require('handlebars');
 const ColorThief = require('color-thief');
 const rgbHex     = require('rgb-hex');
@@ -57,8 +56,8 @@ module.exports = function SVGPlaceholders() {
         const width  = size.width;
 
         const palette = thief.getPalette(file._contents, 2);
-        const startColor = '#' + rgbHex(...palette[0]);
-        const endColor   = '#' + rgbHex(...palette[1]);
+        const startColor = `#${rgbHex(...palette[0])}`;
+        const endColor   = `#${rgbHex(...palette[1])}`;
 
         const gradientUniqueID = `svg-id-${Math.floor(Math.random() * 1000000)}`;
 
