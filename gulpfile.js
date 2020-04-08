@@ -33,9 +33,9 @@ const ENVIRONMENT = argv.production ? 'production' : 'development';
 //  INFORMATION ABOUT THIS PROJECT
 // -----------------------------------------------------------------------------
 //
-//  The process begins with displaying information about current project.
+//  The process begins with displaying information about the current project.
 //  This is a very good idea, because the log includes a lot of information
-//  which helps us to understand where can be problem if the build fails.
+//  which helps us to understand where can be a problem if the build fails.
 //  Also, the build log can be used in conversations and no needed to describe
 //  what project we are talking about, what versions of dependencies are used etc.
 //
@@ -65,7 +65,7 @@ console.log('%s\n'.blue, pkg.browserslist);
 //
 // Sometimes we want to know the real versions of the main dependencies in
 // the project. Package-lock file is not human-friendly, so we save the current
-// versions of dependencies right in the package.json. We'll must update
+// versions of the dependencies right in the package.json. We'll must update
 // them manually in the future, but the most of promotional projects
 // don't require long-time support. So we can freeze the dependencies and
 // never update them.
@@ -119,7 +119,7 @@ console.log('\n\n\n');
 //  GULP TASKS
 // -----------------------------------------------------------------------------
 //
-//  We use separate tasks for different logical actions.
+//  We prefer to use the small tasks for the different logical actions.
 //
 
 
