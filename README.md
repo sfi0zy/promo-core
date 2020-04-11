@@ -12,7 +12,7 @@ This is a boilerplate designed for static promotional websites. It's based on Pu
 
 ## Getting started
 
-At first, you need to clone the Promo Core and install the dependencies. There are almost 50 dependencies so it may take some time.
+At first, you need to clone the Promo Core and install the dependencies. There are almost 50 dependencies, so it may take some time.
 
 ```sh
 git clone https://github.com/sfi0zy/promo-core.git my-awesome-project
@@ -34,21 +34,46 @@ The production mode with ESLint and W3C validator:
 npm run prod
 ```
 
-That's all you need to start development of your awesome project.
+That's all you need to start the development of your awesome project.
 
+
+
+## Features
+
+The main tools in the boilerplate are:
+
+- **For HTML**
+    - Pug preprocessor
+    - W3C validator
+    - Inline SVG images
+- **For CSS**
+    - LESS
+    - Stylelint
+    - PostCSS
+    - Doiuse (warns us, if we used unsupported CSS properties)
+    - Critical CSS extraction
+- **For JS**
+    - Webpack + Babel (preset-env)
+    - ESlint
+- **Others:**
+    - Favicon generator
+    - SVG placeholders generator (for lazy-loaded images)
+    - Docs generator for UI components (based on DSS)
+
+These tools and detailed comments in the pre-created files with the structure of the project help us to develop websites fast and keep the code clean.
 
 
 
 ## Structure
 
-The structure of the Promo Core is quite simple. We have a ```window.APP``` object. It's a global thing that includes everything - dependencies, polyfills, modules, ui components etc. You can look at it in the console.
+The structure of the Promo Core is quite simple. We have a ```window.APP``` object. It's a global thing that includes everything - dependencies, polyfills, modules, ui components, etc. You can look at it in the console.
 
 ![App structure](/app-structure.svg)
 
 
-We use it everythere and it helps to keep the same structure in different projects. And it helps to debug the code as well because we see all events and components in one place.
+We use it everywhere and it helps to keep the same structure in different projects. And it helps to debug the code as well because we see all events and components in one place.
 
-All ideas and conventions are explained in the comments in the source code, so if you're interested in using of Promo Core, you'd better to read them.
+All ideas and conventions are explained in the comments in the source code, so if you're interested in using of Promo Core, you'd better read them.
 
 
 
