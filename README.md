@@ -1,6 +1,6 @@
 # Promo Core
 
-ヾ( °-°)シﾟ`･｡･°*♪･ﾟ’☆
+![version](https://img.shields.io/github/package-json/v/sfi0zy/promo-core?style=flat-square) ![license](https://img.shields.io/github/license/sfi0zy/promo-core?style=flat-square)
 
 
 This is a boilerplate designed for static promotional websites. It's based on Pug templates, LESS, PostCSS and ES6+. No SPA frameworks included.
@@ -117,4 +117,6 @@ Feel free to open an issue in this repository.
 MIT License
 
 Copyright (c) 2019-2020 Ivan Bogachev <sfi0zy@gmail.com>
+
+ヾ( °-°)シﾟ`･｡･°*♪･ﾟ’☆
 
