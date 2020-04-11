@@ -4,7 +4,7 @@
 //
 //  This plugin validates the compiled pages using the W3C validator.
 //
-//  See more information about W3C API here:
+//  See more information about the W3C API here:
 //  https://validator.w3.org/docs/api.html
 //
 

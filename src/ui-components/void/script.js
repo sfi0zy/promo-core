@@ -10,22 +10,22 @@
 
 // We use APP from the window here. This is not a mistake.
 // It's common to init the core app and add some components to it later,
-// so we use this variant everythere for consistency.
+// so we use this variant everywhere for consistency.
 
 const APP = window.APP;
 
 
 // The component always exported from the module as a default class,
-// and it should extend the UIComponent or another component
+// and it should extend the UIComponent or other component
 // which extends the UIComponent.
 export default class Void extends APP.UI.UIComponent {
     constructor(root) {
         // This component extends UIComponent, so we need to call
-        // it's constructor first.
+        // its constructor first.
 
         super(root);
 
-        // We extend the main fields of component. The cache already has
+        // We extend the main fields of the component. The cache already has
         // a field "root" with a root element.
 
         Object.assign(this.cache, {
@@ -77,7 +77,7 @@ export default class Void extends APP.UI.UIComponent {
     }
 
 
-    // The non-default methods are usually placed here, after default ones.
+    // The non-default methods are usually placed here, after the default ones.
 
     doNothing() {
         console.log('Nothing is happened');

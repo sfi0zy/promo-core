@@ -2,11 +2,11 @@
 //  GULP SVG PLACEHOLDERS
 // -----------------------------------------------------------------------------
 //
-//  This plugin generates SVG images with the dimentions of the original
+//  This plugin generates SVG images with the dimensions of the original
 //  *.jpg pictures. They can be injected right into the HTML and used as
 //  placeholders for lazy-loaded images.
 //
-//  More ideas for placeholders such a voronoi mosaic or triangulation are
+//  More ideas for placeholders such a Voronoi mosaic or triangulation are
 //  in the repository: https://github.com/sfi0zy/svg-placeholders
 //
 //  Also, there is an article about them: https://habr.com/ru/post/431232/

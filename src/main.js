@@ -8,7 +8,7 @@
 
 // APP is the main object of the application.
 // It includes everything.
-// It useful to console.log it for debugging.
+// It's useful to log it for debugging.
 
 import APP from './core/js/app';
 
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         APP.UI.add(type, components[type]);
 
         // And then we create instances of the UI components.
-        // They are saved in UI.cache now.
+        // They are saved in the UI.cache now.
         //
         // If the root element of the component has an "id" attribute,
         // we can obtain it by type and id, like this:

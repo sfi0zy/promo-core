@@ -2,7 +2,7 @@
 //  CONFIG: WEBPACK
 // -----------------------------------------------------------------------------
 //
-//  We use webpack for scripts only. This is not a popular choise, usually
+//  We use webpack for scripts only. This is not a popular choice, usually
 //  people use it to pack everything in one bundle, but we use the old-school
 //  approach where HTML, CSS and JS are separated, so we don't need to put
 //  them all in the one box.

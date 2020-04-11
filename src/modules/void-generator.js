@@ -11,7 +11,7 @@
 
 // We use APP from the window here. This is not a mistake.
 // It's common to init the core app and add some modules to it later,
-// so we use this variant everythere for consistency.
+// so we use this variant everywhere for consistency.
 //
 // const APP = window.APP;
 

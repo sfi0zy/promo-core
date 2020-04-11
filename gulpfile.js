@@ -67,7 +67,7 @@ console.log('%s\n'.blue, pkg.browserslist);
 // the project. Package-lock file is not human-friendly, so we save the current
 // versions of the dependencies right in the package.json. We'll must update
 // them manually in the future, but the most of promotional projects
-// don't require long-time support. So we can freeze the dependencies and
+// don't require long-term support. So we can freeze the dependencies and
 // never update them.
 //
 

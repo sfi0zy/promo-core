@@ -21,7 +21,7 @@ class Ui {
         // Here we save the registered types of components
         this.library = {};
 
-        // And here we save the created instances of components
+        // And here, we save the created instances of components
         this.cache = {};
     }
 

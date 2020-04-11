@@ -16,11 +16,11 @@ import UTILS from '../utils';
 
 
 export default class UIComponent {
-    // Static properties, if any, should be placed here, before constructor.
+    // Static properties, if any, should be placed here, before the constructor.
 
     constructor(root) {
         // We don't use the shadow DOM or any templates here. We just cache
-        // the elements we use inside component.
+        // the elements we use inside the component.
         //
         // Usually we don't need more powerful tools to manipulate with
         // elements on promotional websites.
@@ -42,20 +42,20 @@ export default class UIComponent {
         // create the same component twice.
         this.cache.root.setAttribute('data-ui-component', true);
 
-        // The state of the component is here. This is a object where we save
+        // The state of the component is here. This is an object where we save
         // all data for this instance of UI component. It has no specific rules
         // to deal with it.
         this.state = {};
 
-        // The events is a system of local events of this instance of
+        // The events are a system of local events of this instance of
         // UI component. See /src/ui-components/void/ for examples of how
         // to use it. It's not recommended to change everything in it here.
         // If you want to use more powerful events system, make changes right
-        // in the Events class. It's easier to understant the logic of the app
+        // in the Events class. It's easier to understand the logic of the app
         // when all components use the same systems of events.
         this.events = new Events();
 
-        // At the end we usually call all the default methods.
+        // At the end, we usually call all the default methods.
         // Here they are commented because they are empty in this skeleton.
         //
         // this.init();
@@ -81,7 +81,7 @@ export default class UIComponent {
     }
 
 
-    // In this method we do all things associated with local system of events.
+    // In this method we do all things associated with the local system of events.
     initEvents() {
         return this;
     }

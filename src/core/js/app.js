@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 //
 //  This is a singleton of the application. This is that global object
-//  that includes everything and being used everythere.
+//  that includes everything and being used everywhere.
 //
 
 
@@ -17,7 +17,7 @@ import Events       from './modules/events';
 
 class App {
     constructor() {
-        // These __SOMETHING__ things are not a "real" variables.
+        // These __SOMETHING__ things are not "real" variables.
         // See the /webpack.config.js to get more information.
         this.__PROJECT__           = __PROJECT__;
         this.__PROJECT_VERSION__   = __PROJECT_VERSION__;
