@@ -42,17 +42,17 @@ That's all you need to start the development of your awesome project.
 
 The main tools in the boilerplate are:
 
-- **For HTML**
+- **For HTML:**
     - Pug preprocessor
     - W3C validator
     - Inline SVG images
-- **For CSS**
+- **For CSS:**
     - LESS
     - Stylelint
     - PostCSS
     - Doiuse (warns us, if we used unsupported CSS properties)
     - Critical CSS extraction
-- **For JS**
+- **For JS:**
     - Webpack + Babel (preset-env)
     - ESlint
 - **Others:**
@@ -83,6 +83,11 @@ The full list of the dependencies with descriptions can be found in the docs tem
 
 
 
+## Browser support
+
+The boilerplate is created for modern evergreen browsers and Edge 12+, but technically the browser support depends not on the boilerplate, but on your code. If you'll use CSS or JS features, which are not supported by browsers, you have to add the polyfills manually. The number of them is infinite and it's a terrible idea to add them all to the boilerplate.
+
+The browserslist for the doiuse and other tools is defined in the ```package.json```.
 
 
 ## Practical usage
