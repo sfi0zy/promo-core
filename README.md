@@ -94,21 +94,24 @@ The browserslist for the doiuse and other tools is defined in the ```package.jso
 
 The basic process of development looks like this:
 
-1. Clone the repository, install dependencies.
-2. Check the information in package.json and change origins in git if you need to.
-3. Put your images into ```/src/images/```.
-4. Start development server with ```npm run dev```.
-5. Go to ```/src/modules/```, add your non-UI code.
-6. Import your modules to the ```APP.MODULES``` in ```/src/main.js```.
-7. Go to ```/src/core/less/```, set global styles, constants for LESS and color scheme.
-8. Go to ```/src/ui-components/```, add your UI components (use Void as example).
-9. Import your UI components to the ```APP.UI``` in ```/src/main.js``` and ```/src/main.less```.
-10. Go to ```/src/pages``` and add your pages.
-11. Remove or comment the unused dependencies in ```/src/core/js/dependencies.js```.
-12. Run ```npm run prod```.
-13. Get the ```/dist``` directory ant put it on your server.
+1. Clone the repository.
+2. Check the information in ```package.json``` and change the origins for git, if you need to.
+3. Install the dependencies with ```npm i```.
+4. Uncomment the pre-installed dependencies you want to use in ```/src/core/js/dependencies.js``` (or add your own ones).
+5. Do the same thing with the polyfills in ```/src/core/js/polyfills.js```.
+6. Put your images into ```/src/images/```.
+7. Start the development server with ```npm run dev```.
+8. Add your non-UI code as modules to ```/src/modules/``` (use the VoidGenerator as an example).
+9. Import your modules to the ```MODULES``` field of the ```APP``` in ```/src/main.js```.
+10. Add the global styles, constants for LESS and your color scheme into the files in ```/src/core/less/```.
+11. Add your UI components to ```/src/ui-components/``` (use the Void as an example).
+12. Import your UI components to the ```UI``` field of the ```APP``` in ```/src/main.js``` and in ```/src/main.less```.
+13. Add your pages to ```/src/pages/```.
+14. Run ```npm run prod``` to activate the production build.
+15. If all is OK, get the ```/dist/``` directory ant put it on your server.
 
 
+You can use ```console.log(APP)``` any time to obtain all the information about the loaded dependencies and polyfills, registered and created components, events, etc.
 
 
 ## Have any questions or found a bug?
