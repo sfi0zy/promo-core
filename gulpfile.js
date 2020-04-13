@@ -12,6 +12,7 @@ const $            = require('gulp-load-plugins')();
 const fs           = require('fs');
 const path         = require('path');
 const argv         = require('yargs').argv;
+const semver       = require('semver');
 const webpack      = require('webpack-stream');
 const critical     = require('critical').stream;
 const browserSync  = require('browser-sync').create();
@@ -43,6 +44,13 @@ const ENVIRONMENT = argv.production ? 'production' : 'development';
 
 // Current time
 console.log(`${(new Date()).toString().white}\n`);
+
+// Node.js version
+if (semver.satisfies(process.version, pkg.engines.node)) {
+    console.log('Node %s (recommended %s)\n'.green, process.version, pkg.engines.node);
+} else {
+    console.log('(!) Node %s (recommended %s)\n'.red, process.version, pkg.engines.node);
+}
 
 // Console command that starts the gulp
 console.log(`> ${argv.$0} ${argv._}`);
