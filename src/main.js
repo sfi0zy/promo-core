@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Next we initialize the UI components.
-    [].forEach.call(Object.keys(components), (type) => {
+    Object.keys(components).forEach((type) => {
         // At first we add the component to the UI.library.
         APP.UI.add(type, components[type]);
 
