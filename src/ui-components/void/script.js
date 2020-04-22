@@ -82,6 +82,16 @@ export default class Void extends APP.UI.UIComponent {
     doNothing() {
         console.log('Nothing is happened');
 
+        // We can use the modules from APP.MODULES in UI components.
+        // But remember, we need to check if they are enabled.
+        // The modules can be disabled by APP.FLAGS.
+
+        if (APP.FLAGS.ENABLE_VOID_EXAMPLES) {
+            /* eslint-disable no-unused-vars */
+            const myLocalVoidGenerator = new APP.MODULES.VoidGenerator();
+            /* eslint-enable no-unused-vars */
+        }
+
         return this;
     }
 }

@@ -73,6 +73,8 @@ The structure of the Promo Core is quite simple. We have a ```window.APP``` obje
 
 We use it everywhere and it helps to keep the same structure in different projects. And it helps to debug the code as well because we see all events and components in one place.
 
+The logical parts of the APP can be enabled or disabled using the APP.FLAGS object.
+
 All ideas and conventions are explained in the comments in the source code, so if you're interested in using of Promo Core, you'd better read them.
 
 

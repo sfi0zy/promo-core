@@ -86,6 +86,8 @@ html(lang='en')
                     li Document everything, especially math algorithms and dependencies. Use www links if needed.
                     li Use "if" statements and the __DEBUG__ define to wrap code for debugging.
                     li Import everything to the global APP object.
+                    li Use APP.FLAGS to enable or disable the logical parts of the APP.
+                    li Use "null" as the fallback value for disabled modules and UI components. Keep their names in the APP.
                     li Wrap "window" and "document" events using global APP.EVENTS object.
                     li Use RSCSS methodology in CSS. Keep the code readable. Respect Stylelint.
                     li Use simple and understandable solutions. Avoid tricky math mixins in CSS.

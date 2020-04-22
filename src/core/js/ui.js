@@ -34,10 +34,6 @@ class Ui {
 
 
     create(type, selector, options) {
-        if (typeof this.library[type] !== 'function') {
-            throw new Error(`No such component: ${type}`);
-        }
-
         if (!this.cache[type]) {
             this.cache[type] = [];
         }
@@ -45,7 +41,13 @@ class Ui {
         const elements = document.querySelectorAll(selector);
 
         return [].map.call(elements, (element) => {
-            const newComponent = new this.library[type](element, options);
+            let newComponent;
+
+            if (this.library[type]) {
+                newComponent = new this.library[type](element, options);
+            } else {
+                newComponent = null;
+            }
 
             this.cache[type].push(newComponent);
 

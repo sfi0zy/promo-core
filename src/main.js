@@ -23,16 +23,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // They use the window.APP object as a container with
     // dependencies, polyfills etc. They don't import it as ES6 module.
 
+    // Also, we can use the FLAGS here to disable some modules.
+    // We can use them everywhere, but here we can totally disable modules
+    // and their code will not be available in the APP.
+
     // The MODULES field already includes the modules from the core.
     // So we extend it instead of assigning a new value for it.
     Object.assign(APP.MODULES, {
-        VoidGenerator: require('./modules/void-generator').default
+        VoidGenerator: APP.FLAGS.ENABLE_VOID_EXAMPLES ? require('./modules/void-generator').default : null,
     });
 
     // Components will be saved in UI, so we don't add them to the APP object.
     const components = {
         Image: require('./ui-components/image/script').default,
-        Void:  require('./ui-components/void/script').default,
+        Void:  APP.FLAGS.ENABLE_VOID_EXAMPLES ? require('./ui-components/void/script').default : null,
     };
 
     // Next we initialize the UI components.

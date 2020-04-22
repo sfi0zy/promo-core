@@ -7,6 +7,8 @@
 //
 
 
+import FLAGS        from './flags';
+
 import DEPENDENCIES from './dependencies';
 import POLYFILLS    from './polyfills';
 import UTILS        from './utils';
@@ -24,6 +26,7 @@ class App {
         this.__DEBUG__             = __DEBUG__;
         this.__GLOBAL_CSS_PREFIX__ = __GLOBAL_CSS_PREFIX__;
 
+        this.FLAGS = FLAGS;
 
         this.DEPENDENCIES = DEPENDENCIES;
         this.POLYFILLS    = POLYFILLS;
