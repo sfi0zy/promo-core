@@ -81,7 +81,7 @@ html(lang='en')
                 br
                 ol(style='padding-left: 2em;')
                     li Keep the starting structure of the files (and the structure of the code) in your project.
-                    li Use ES6+. Respect ESLint.
+                    li Use ES6+. Respect ESLint and SonarJS.
                     li Use similar names of components in JS and CSS: "MyComponent" (JS) &rarr; .ui-my-component (LESS).
                     li Document everything, especially math algorithms and dependencies. Use www links if needed.
                     li Use "if" statements and the __DEBUG__ define to wrap code for debugging.
@@ -91,7 +91,7 @@ html(lang='en')
                     li Wrap "window" and "document" events using global APP.EVENTS object.
                     li Use RSCSS methodology in CSS. Keep the code readable. Respect Stylelint.
                     li Use simple and understandable solutions. Avoid tricky math mixins in CSS.
-                    li Use 4 spaces. No tabs.
+                    li Use 4 spaces. No tabs. There is an .editorconfig for your favorite IDE in the project root.
                     li Use UTF-8 and UNIX-style line endings.
             br
             br
@@ -167,6 +167,7 @@ html(lang='en')
                                 ul(style='padding-left: 2em;')
                                     li eslint-config-airbnb-base - we extend this config, see .eslintrc
                                     li eslint-plugin-import - this plugin is required if we use es6 modules
+                                    li eslint-plugin-sonarjs - the static analyser for JS
 
                     li
                         b Custom gulp plugins

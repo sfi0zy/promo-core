@@ -55,6 +55,7 @@ The main tools in the boilerplate are:
 - **For JS:**
     - Webpack + Babel (preset-env)
     - ESlint
+    - SonarJS
 - **Others:**
     - Favicon generator
     - SVG placeholders generator (for lazy-loaded images)
@@ -112,13 +113,15 @@ The basic process of development looks like this:
 14. Run ```npm run prod``` to activate the production build.
 15. If all is OK, get the ```/dist/``` directory ant put it on your server.
 
-
 You can use ```console.log(APP)``` any time to obtain all the information about the loaded dependencies and polyfills, registered and created components, events, etc.
+
 
 
 ## Have any questions or found a bug?
 
 Feel free to open an issue in this repository.
+
+A number of errors and warnings are "predefined" for every type of code in the project (5 for HTML, 1 for LESS, 3 for JS). If you see all of them in your first build after ```npm i```, it means that all linters, validators and analysers work. It's not a bug, it's a dummy test to make sure they are not broken. Just enjoy the detailed, colorful log.
 
 
 

@@ -1,5 +1,8 @@
 {
-    "extends": "airbnb-base",
+    "extends": [
+        "airbnb-base",
+        "plugin:sonarjs/recommended"
+    ],
 
     "parser": "babel-eslint",
 
@@ -14,6 +17,11 @@
         __DEBUG__,
         __GLOBAL_CSS_PREFIX__
     },
+
+
+    "plugins": [
+        "sonarjs"
+    ],
 
 
     "rules": {

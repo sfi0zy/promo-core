@@ -57,7 +57,10 @@ export default class Void extends APP.UI.UIComponent {
 
 
     initEvents() {
-        // Here is an example of usage of events
+        // Here is an example of usage of events.
+        // We add a couple of mistakes here to make sure ESLint and SonarJS are enabled.
+
+        const If_you_see_2_errors_and_1_warning_here_ESLint_and_SonarJS_work_correctly = 'They work!';
 
         this.events.add('nothing-is-happened');
 
