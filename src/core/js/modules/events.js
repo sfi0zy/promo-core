@@ -19,7 +19,8 @@ export default class Events {
         if (!(name in this.events)) {
             this.events[name] = {
                 callbacks: [],
-                happenedTimes: 0
+                happenedTimes: 0,
+                lastDetails: {}
             };
         }
 
@@ -31,8 +32,8 @@ export default class Events {
         if ((name in this.events) && (typeof callback === 'function')) {
             this.events[name].callbacks.push(callback);
 
-            if (executeIfAlreadyFired && (this.events[name].counter > 0)) {
-                callback();
+            if (executeIfAlreadyFired && (this.events[name].happenedTimes > 0)) {
+                callback(this.events[name].lastDetails);
             }
         }
 
@@ -40,13 +41,14 @@ export default class Events {
     }
 
 
-    fire(name) {
+    fire(name, details) {
         if (name in this.events) {
             this.events[name].happenedTimes++;
+            this.events[name].lastDetails = details;
 
             this.events[name].callbacks.forEach((callback) => {
                 if (typeof callback === 'function') {
-                    callback(this.state);
+                    callback(details);
                 }
             });
         }
