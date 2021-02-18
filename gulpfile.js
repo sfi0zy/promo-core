@@ -188,11 +188,14 @@ gulp.task('promo-core:compile-less', () => {
 
 
 gulp.task('promo-core:generate-favicon', (done) => {
+    /*
     $.realFavicon.generateFavicon(
         require('./favicon.config.js'), () => {
             done();
         }
     );
+    */
+    done();
 });
 
 
