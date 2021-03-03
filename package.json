@@ -60,7 +60,7 @@
     "path": "0.12.7",
     "postcss-fixes": "2.0.1",
     "postcss-preset-env": "6.7.0",
-    "pug": "2.0.4",
+    "pug": "3.0.1",
     "rgb-hex": "3.0.0",
     "semver": "7.2.2",
     "stylelint": "13.2.0",
